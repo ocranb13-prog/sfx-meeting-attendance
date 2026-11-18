@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <title>Meeting attendance</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="center-page">
+    <div class="panel" id="panel">
+      <img id="logo" class="logo hidden" alt="Hospital logo">
+      <h1 id="hospital">Meeting attendance</h1>
+      <p class="sub">Record your attendance</p>
+
+      <div id="loading" class="muted" style="text-align:center">Loading meeting...</div>
+      <div id="error" class="form-error hidden" role="alert"></div>
+
+      <div id="meeting" class="meeting-box hidden"></div>
+
+      <form id="step-form" class="hidden" novalidate>
+        <div class="field"><label for="staffId">Staff ID</label>
+          <input id="staffId" autocomplete="off" autocapitalize="characters" inputmode="text" maxlength="40" required></div>
+        <div class="field"><label for="department">Department</label>
+          <select id="department" required></select></div>
+        <button class="btn" id="continue" type="submit">Continue</button>
+      </form>
+
+      <div id="confirm" class="hidden">
+        <p style="margin-top:0"><b>Please confirm these are your details.</b></p>
+        <dl class="confirm-card">
+          <dt>Full name</dt><dd id="c-name"></dd>
+          <dt>Staff ID</dt><dd id="c-id"></dd>
+          <dt>Department</dt><dd id="c-dept"></dd>
+        </dl>
+        <button class="btn" id="confirm-btn" type="button">Confirm attendance</button>
+        <button class="btn secondary" id="back-btn" type="button">Go back</button>
+      </div>
+
+      <div id="success" class="hidden">
+        <div class="success-mark"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <p class="success-title">ATTENDANCE RECORDED SUCCESSFULLY</p>
+        <dl class="confirm-card">
+          <dt>Full name</dt><dd id="s-name"></dd>
+          <dt>Staff ID</dt><dd id="s-id"></dd>
+          <dt>Department</dt><dd id="s-dept"></dd>
+          <dt>Meeting</dt><dd id="s-meeting"></dd>
+          <dt>Meeting date</dt><dd id="s-date"></dd>
+          <dt>Attendance time</dt><dd id="s-time"></dd>
+        </dl>
+        <p class="muted small" style="text-align:center;margin-bottom:0">You can now close this page.</p>
+      </div>
+    </div>
+  </div>
+  <script src="/js/attend.js"></script>
+</body>
+</html>

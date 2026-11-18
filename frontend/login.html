@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrator sign in</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="center-page">
+    <div class="panel">
+      <img id="logo" class="logo hidden" alt="Hospital logo">
+      <h1 id="hospital">St. Francis Xavier Hospital</h1>
+      <p class="sub">Meeting attendance - administrator sign in</p>
+      <div id="error" class="form-error hidden" role="alert"></div>
+      <div id="info" class="meeting-box hidden"></div>
+      <form id="login-form" novalidate>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required></div>
+        <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+        <button class="btn" id="submit" type="submit">Sign in</button>
+      </form>
+      <p class="small" style="text-align:center;margin-top:14px"><a href="#" id="forgot">Forgot your password?</a></p>
+    </div>
+  </div>
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>

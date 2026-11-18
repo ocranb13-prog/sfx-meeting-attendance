@@ -1,0 +1,17 @@
+rules_version = '2';
+
+// DESIGN: every read and write goes through the Flask backend, which uses the Firebase
+// Admin SDK (service account). The Admin SDK bypasses these rules, so the rules can deny
+// ALL direct client access. Public users therefore can only do what the backend's
+// rate-limited, validated attendance endpoints allow, and nobody can read the staff list,
+// QR tokens, attendance or audit logs straight from a browser using the public web config.
+//
+// Collections protected: users, staff, departments, meetings, meetingQR, attendance,
+// auditLogs, systemSettings.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

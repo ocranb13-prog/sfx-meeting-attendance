@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meeting Attendance - Admin</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img id="brand-logo" class="hidden" alt="">
+        <div><b id="brand-name">St. Francis Xavier Hospital</b><span>Meeting Attendance</span></div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Main"></nav>
+      <div class="sidebar-foot">
+        <div id="who"></div>
+        <button class="btn secondary" id="logout" type="button">Sign out</button>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="topbar">
+        <button id="menu-btn" type="button" aria-label="Open menu"></button>
+        <b id="topbar-name">Meeting Attendance</b>
+      </div>
+      <main class="content" id="view" aria-live="polite"></main>
+    </div>
+  </div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
